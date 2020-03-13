@@ -1,0 +1,45 @@
+package Nestedclasses;
+
+import java.util.ArrayList;
+
+public class Studentdemo {
+
+	public static void main(String[] args) {
+		Student s1=new Student();
+		
+		//set values
+		s1.setRollNumber(111);
+		s1.setStudentName("Arun");
+		s1.setMarks(416);
+		s1.setGrade((byte)'A');
+		
+		Student s2=new Student();
+	    s2.setRollNumber(112);
+		s2.setStudentName("Arun");
+		s2.setMarks(303);
+		s2.setGrade((byte)'B');
+		//create an array of student object
+		Student stuarray[]={s1,s2};
+		
+		//create a collection an Arraylist
+		ArrayList<Student> stucollection=new ArrayList<Student>();
+		
+		//add elements to ArrayList
+		 stucollection.add(s1);
+		 stucollection.add(s2);
+		//stucollection.add("Priyanka");
+		//stucollection.add(33.52f);
+		System.out.println(stucollection);		
+		Studentnamecomparator sc=new Studentnamecomparator();
+		if(sc.compare(s1,s2)==1)
+		{
+			System.out.println("Both the objects have same names");
+		}else
+		{
+			System.out.println("Both the objects have different cases");
+		
+		}
+			
+	}
+
+}
